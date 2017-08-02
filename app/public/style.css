@@ -1,0 +1,58 @@
+/*initial set*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+body {
+
+	background-image: url("assets/got-JS-giphy.gif"); 
+  	background-size: cover;
+	background-repeat: no-repeat;
+	color: #faf8f3;
+	font-family: 'Berkshire Swash', cursive;
+	text-shadow: 2px 2px 5px #d2fcf9;
+	border-radius: 5px;
+}
+
+
+/*individual styling*/
+.navbar-default, .jumbotron {
+	color: #faf8f3;
+	background-color: #363635;
+	border: 1px solid #d2fcf9;
+}
+
+img {
+    max-height: 20%;
+    max-width: 100%;
+}
+
+h1 {
+    padding-bottom: 2.5%;
+    font-size: 500%;
+}
+
+h2 {
+	text-align: left;
+}
+
+.jumbotron {
+	margin-top: 2.5%;
+}
+
+footer {
+	text-shadow: initial;
+}
+
+
+/*button formatting*/
+.btn-primary, .btn-danger {
+	float: left;
+}
+
+.btn-info {
+	margin-left: 44%;
+}
