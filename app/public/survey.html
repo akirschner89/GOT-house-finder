@@ -2,7 +2,7 @@
 	<head>
 	<meta charset="UTF-8">
 	<title>Friend Finder</title>
-	 <link rel="shortcut icon" href="sword.jpeg" type="image/x-icon"> 
+	 <link rel="shortcut icon" href="assets/sword.jpeg" type="image/x-icon"> 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<!-- Latest compiled and minified CSS & JS -->
@@ -19,11 +19,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 	<!-- Chosen -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.7.0/chosen.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.7.0/chosen.jquery.min.js"></script>
 
 	<!-- Custom -->
 	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="survey-style.css">
+
 
 </head>
 <body>
@@ -38,13 +40,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="home.html"><img src="assets/sword.jpeg" alt="icon"></a>
+<!--       <a class="navbar-brand" href="home.html"><img src="assets/sword.jpeg" alt="icon" class="brand-icon"></a> -->
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="survey.html">Survey</a></li>
+        <li><a href="home.html" class="nav-text">Home</a></li>
+        <li><a href="survey.html" class="nav-text">Survey</a></li>
       </ul>
     </div>
   </div>
@@ -61,7 +63,7 @@
 
 		<h4>URL Link to Profile Image or Gif (Required)</h4>
 		<input type="text" name="" id="photo" class="form-control" required>
-		<h4>Or, link Your Photo/Gif Here</h4>
+		<h4>Or <button type="submit" class="btn btn-primary btn-lg" id="pic"> <i class="fa fa-picture-o" aria-hidden="true"></i> Upload a Photo/Gif</button></h4>
 
 <!-- add in the "add image" button here
 button triggers anothermodal popup
@@ -71,7 +73,7 @@ will need to write method to define the image getData below in the var newUser -
 		<hr>
 
 		<h3><strong>Question 1</strong></h3>
-		<h4>You love Game of Thrones.</h4>
+		<h4>Your true house has a rightful claim to the throne.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q1">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -82,7 +84,7 @@ will need to write method to define the image getData below in the var newUser -
       	</select>
 
 		<h3><strong>Question 2</strong></h3>
-		<h4>You enjoy trying new things on a regular basis.</h4>
+		<h4>You are driven to become rich and powerful.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q2">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -94,7 +96,7 @@ will need to write method to define the image getData below in the var newUser -
 
 
 		<h3><strong>Question 3</strong></h3>
-		<h4>Pressure doesn't phase you.</h4>
+		<h4>Learning the art of war is important.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q3">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -106,7 +108,7 @@ will need to write method to define the image getData below in the var newUser -
 
 
 		<h3><strong>Question 4</strong></h3>
-		<h4>You tend to be curious about the world around you.</h4>
+		<h4>You believe that if the King of the realm is showing signs of mental instability, a revolution is in order.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q4">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -118,7 +120,7 @@ will need to write method to define the image getData below in the var newUser -
 
 
 		<h3><strong>Question 5</strong></h3>
-		<h4>Popeye's is the most incredible fast food available to mankind.</h4>
+		<h4>You consider yourself to be an honorable person.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q5">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -130,7 +132,7 @@ will need to write method to define the image getData below in the var newUser -
 
 
 		<h3><strong>Question 6</strong></h3>
-		<h4>It's easy to put yourself in someone else's shoes.</h4>
+		<h4>It's easier to pay another party to do your dirty work instead of taking responsibility yourself.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q6">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -142,7 +144,7 @@ will need to write method to define the image getData below in the var newUser -
 
 
 		<h3><strong>Question 7</strong></h3>
-		<h4>The truth is more important than protecting the feelings of others.</h4>
+		<h4>Truth and justice are the most important viture.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q7">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -153,7 +155,7 @@ will need to write method to define the image getData below in the var newUser -
       	</select>
 
 		<h3><strong>Question 8</strong></h3>
-		<h4>You enjoy daydreaming.</h4>
+		<h4>You consider yourself religious.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q8">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -164,7 +166,7 @@ will need to write method to define the image getData below in the var newUser -
       	</select>
 
 		<h3><strong>Question 9</strong></h3>
-		<h4>Everyone is entitled to their own opinion.</h4>
+		<h4>Knowledge is more important than brute strength.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q9">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -175,7 +177,7 @@ will need to write method to define the image getData below in the var newUser -
       	</select>
 
 		<h3><strong>Question 10</strong></h3>
-		<h4>There is beauty in this world.</h4>
+		<h4>You are not afraid of dragons.</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q10">
 	 		<option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -213,7 +215,7 @@ will need to write method to define the image getData below in the var newUser -
 	      </div>
 	      <div class="modal-body">
 	        <h2 id="matchName"></h2>
-	        <img id="matchImg" alt="">
+	        <img id="inputImg" alt=""><img id="matchImg" alt="">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -223,87 +225,84 @@ will need to write method to define the image getData below in the var newUser -
 	  </div>
 	</div>
 
-
-
-<!--   	// Chosen CSS
-  //   var config = {
-  //     '.chosen-select'           : {},
-  //     '.chosen-select-deselect'  : {allow_single_deselect:true},
-  //     '.chosen-select-no-single' : {disable_search_threshold:10},
-  //     '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-  //     '.chosen-select-width'     : {width:"95%"}
-  //   }
-  //   for (var selector in config) {
-  //     $(selector).chosen(config[selector]);
-  //   }
-
-  //   // Capture the form inputs 
-  //   $("#submit").on("click", function(){
-
-  //   	// Form validation
-  //   	function validateForm() {
-		//   var isValid = true;
-		//   $('.form-control').each(function() {
-		//     if ( $(this).val() === '' )
-		//         isValid = false;
-		//   });
-
-		//   $('.chosen-select').each(function() {
-
-		//   	if( $(this).val() === "")
-		//   		isValid = false
-		//   })
-		//   return isValid;
-		// }
-
-		// // If all required fields are filled
-		// if (validateForm() == true) {
-		// 	// Create an object for the user's data
-	 //    	var userData = {
-	 //    		name: $("#name").val().trim(),
-	 //    		photo: $("#photo").val().trim(),
-	 //    		scores: [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(), $("#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val().trim(), $("#q10").val().trim()]
-	 //    	}
-
-	 //    	console.log(userData);
-
-	 //    	// Grab the URL of the website
-	 //    	var currentURL = window.location.origin;
-
-	 //    	// AJAX post the data to the friends API. 
-	 //    	$.post(currentURL + "/api/friends", userData, function(data){
-
-	 //    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-	 //    		$("#matchName").text(data.name);
-	 //    		$('#matchImg').attr("src", data.photo);
-
-		//     	// Show the modal with the best match 
-		//     	$("#resultsModal").modal('toggle');
-
-	 //    	});
-	    	
-
-		// }
-
-		// else
-		// {
-		// 	alert("Please fill out all fields before submitting!");
-		// }
-  //   		$(".form-control").val('');
-	 //    	$(".chosen-select").val('').trigger('chosen:updated');;
-  //   	return false;
-  //   });
- -->
-
-
 <footer>
-    <div class="container">
+    <div class="container fixed-bottom">
       Copyright @2017 Adam Kirschner
     </div>
   </footer>
 
+<!-- <script type="text/javascript">
+	var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
 
-  <script type="text/javascript" src="survey.js"></script>
+    // Capture the form inputs 
+    $("#submit").on("click", function(){
+
+    	// Form validation
+    	function validateForm() {
+		  var isValid = true;
+		  $('.form-control').each(function() {
+		    if ( $(this).val() === '' )
+		        isValid = false;
+		  });
+
+		  $('.chosen-select').each(function() {
+
+		  	if( $(this).val() === "")
+		  		isValid = false
+		  })
+		  return isValid;
+		}
+
+		// If all required fields are filled
+		if (validateForm() == true) {
+			// Create an object for the user's data
+	    	var userData = {
+	    		name: $("#name").val().trim(),
+	    		photo: $("#photo").val().trim(),
+	    		scores: [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(), $("#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val().trim(), $("#q10").val().trim()]
+	    	}
+
+	    	console.log(userData);
+
+	    	// Grab the URL of the website
+	    	var currentURL = window.location.origin;
+
+	    	// AJAX post the data to the friends API. 
+	    	$.post(currentURL + "/api/friends", userData, function(data){
+
+	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
+	    		$("#matchName").text("Sir " + userData.Name + " belongs in house " data.name);
+	    		$('#matchImg').attr("src", data.photo);
+
+		    	// Show the modal with the best match 
+		    	$("#resultsModal").modal('toggle');
+
+	    	});
+	    	
+
+		}
+
+		else
+		{
+			alert("Please fill out all fields before submitting!");
+		}
+    		$(".form-control").val('');
+	    	$(".chosen-select").val('').trigger('chosen:updated');;
+    	return false;
+    });
+</script> -->
+
+<script type="text/javascript" src="survey.js"></script>
+  
 
 </body>
 </html>

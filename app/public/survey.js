@@ -43,10 +43,11 @@
 	    	var currentURL = window.location.origin;
 
 	    	// AJAX post the data to the friends API. 
-	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    	$.post(currentURL + "/api/house", userData, function(data){
 
 	    		// Grab the result from the AJAX post so that the best match's name and photo are displayed.
-	    		$("#matchName").text(data.name);
+	    		$("#matchName").text("Sir " + userData.name + " belongs in " + data.name);
+	    		$("#inputImg").attr("src", userData.photo);
 	    		$('#matchImg').attr("src", data.photo);
 
 		    	// Show the modal with the best match 
