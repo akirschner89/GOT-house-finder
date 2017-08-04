@@ -63,7 +63,7 @@ module.exports = function(app) {
             else {
                 x++;
                 // targetScore++;
-                if (x === houseData.length -1) {
+                if (x === houseData.length) {
                     x = 0;
                     targetScore++;
                 }

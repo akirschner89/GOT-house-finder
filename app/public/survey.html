@@ -62,12 +62,16 @@
 		<input type="text" name="" id="name" class="form-control" required>
 
 		<h4>URL Link to Profile Image or Gif (Required)</h4>
-		<input type="text" name="" id="photo" class="form-control" required>
-		<h4>Or <button type="submit" class="btn btn-primary btn-lg" id="pic"> <i class="fa fa-picture-o" aria-hidden="true"></i> Upload a Photo/Gif</button></h4>
+		<input type="text" name="img" id="photo" class="form-control photo" required>
+		<h4>Or 
+		<input type="file" id="imgUpload">
+		<label type="submit" for="imgUpload" class="btn btn-primary btn-lg photo" id="pic"> <i class="fa fa-picture-o" aria-hidden="true"></i> Upload a Photo/Gif</label><img id="userImg" src="#" alt="User Image" hidden="true"/></h4>
+
+
 
 <!-- add in the "add image" button here
 button triggers anothermodal popup
-modal popup includes grad and drop features
+modal popup includes drag and drop features
 add validation below to the input typer="text" saying isValid = true so it won't trigger the alert
 will need to write method to define the image getData below in the var newUser -->
 		<hr>

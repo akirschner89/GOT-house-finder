@@ -7,8 +7,8 @@ var path = require("path");
 
 app.use(express.static("app/public"));
 app.use(favicon(path.join(__dirname + "/app/public/assets/sword.jpeg")));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
