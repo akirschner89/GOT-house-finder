@@ -7,7 +7,7 @@
 
 body {
 	background: url("assets/dragons.gif") center center fixed; 
-  	background-size: 100% 130%;
+  	background-size: cover;
 	background-repeat: no-repeat;
 	color: #faf8f3;
 	font-family: 'Berkshire Swash', cursive;

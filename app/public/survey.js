@@ -24,12 +24,15 @@ function imageIsLoaded(img) {
     $('#userImg').attr('hidden', false);
 };
 
+
+
     // Capture the form inputs 
     $("#submit").on("click", function(){
 
     	// Form validation
     	function validateForm() {
 		  var isValid = true;
+
 		  
 		   if ($("#name").val() === '') {
 		        isValid = false;
